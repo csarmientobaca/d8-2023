@@ -1,6 +1,6 @@
 import { Component } from "react"
 import { Row, Col, Spinner, Alert } from "react-bootstrap"
-
+import { Link } from "react-router-dom"
 
 class Carousel extends Component {
     state = {
@@ -46,7 +46,9 @@ class Carousel extends Component {
                 {
                     movie.map(movie =>
                         <Col key={movie.imdbID} className="mb-2 px-1">
-                            <img className="img-fluid" src={movie.Poster} alt="poster" />
+                            <Link to={"/moviedetails/" + 1}>
+                                <img className="img-fluid" src={movie.Poster} alt="poster" />
+                            </Link>
                         </Col>
                     )
                 }
