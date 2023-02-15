@@ -46,7 +46,7 @@ class Carousel extends Component {
                 {
                     movie.map(movie =>
                         <Col key={movie.imdbID} className="mb-2 px-1">
-                            <Link to={"/moviedetails/" + 1}>
+                            <Link to={"/moviedetails/" + movie.imdbID}>
                                 <img className="img-fluid" src={movie.Poster} alt="poster" />
                             </Link>
                         </Col>
