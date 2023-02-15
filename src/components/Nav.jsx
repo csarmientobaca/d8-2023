@@ -1,6 +1,7 @@
 import React from "react";
 import { Navbar, Nav, Image } from "react-bootstrap";
 import { FaSearch, FaBell, FaUser } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import logo from "../assets/logo.png"
 
 
@@ -14,8 +15,13 @@ function NavTop() {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
-                    <Nav.Link href="#">Home</Nav.Link>
-                    <Nav.Link href="#">TV Shows</Nav.Link>
+                    <Nav.Link >
+                        <Link to="/">Home</Link>
+                    </Nav.Link>
+
+                    <Link to="/tv">
+                        <Nav.Link href="/tv">TV Shows</Nav.Link>
+                    </Link>
                     <Nav.Link href="#">Movies</Nav.Link>
                     <Nav.Link href="#">Recently Added</Nav.Link>
                     <Nav.Link href="#">My List</Nav.Link>
